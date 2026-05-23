@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pricing — ContextShift</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: #0a0a0a; color: #f0ece4; min-height: 100vh;
+    }
+    nav {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 20px 40px; border-bottom: 1px solid #1e2028;
+    }
+    .nav-brand { text-decoration: none; color: #f0ece4; font-weight: 700; font-size: 17px; }
+    .nav-links { display: flex; gap: 28px; align-items: center; }
+    .nav-links a { color: #706050; text-decoration: none; font-size: 14px; transition: color 150ms; }
+    .nav-links a:hover { color: #f0ece4; }
+    main { max-width: 860px; margin: 0 auto; padding: 80px 40px; text-align: center; }
+    .eyebrow {
+      font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase;
+      color: #c8a96e; margin-bottom: 20px; font-family: "DM Mono", monospace;
+    }
+    h1 { font-size: clamp(32px, 5vw, 52px); font-weight: 800; line-height: 1.1; margin-bottom: 16px; }
+    .subtitle { font-size: 15px; color: #706050; max-width: 500px; margin: 0 auto 16px; line-height: 1.7; }
+    .honest-note {
+      display: inline-block;
+      background: #111108; border: 1px solid #1e2028;
+      border-left: 3px solid #c8a96e; border-radius: 6px;
+      padding: 14px 20px; margin-bottom: 52px;
+      font-size: 13px; color: #907060; line-height: 1.6;
+      text-align: left; max-width: 540px;
+    }
+    .honest-note strong { color: #c8a96e; }
+    .plans {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px; margin-bottom: 48px;
+    }
+    .plan {
+      background: #111108; border: 1px solid #1e2028;
+      border-radius: 12px; padding: 36px 28px; text-align: left;
+      position: relative; transition: border-color 200ms;
+    }
+    .plan:hover { border-color: #c8a96e22; }
+    .plan.featured { border-color: #c8a96e55; }
+    .plan.featured::before {
+      content: "MOST POPULAR";
+      position: absolute; top: -12px; left: 50%; transform: translateX(-50%);
+      background: #c8a96e; color: #0a0a0a;
+      font-size: 10px; font-weight: 700; letter-spacing: 0.1em;
+      padding: 4px 14px; border-radius: 20px;
+    }
+    .plan-name { font-size: 12px; text-transform: uppercase; letter-spacing: 0.1em; color: #504840; margin-bottom: 16px; font-family: "DM Mono", monospace; }
+    .plan-price { font-size: 48px; font-weight: 800; line-height: 1; margin-bottom: 4px; }
+    .plan.featured .plan-price { color: #c8a96e; }
+    .plan-period { font-size: 12px; color: #504840; margin-bottom: 28px; font-family: "DM Mono", monospace; }
+    .plan-features { list-style: none; margin-bottom: 32px; }
+    .plan-features li {
+      font-size: 13px; color: #907060; padding: 7px 0;
+      border-bottom: 1px solid #1a1810; display: flex;
+      align-items: flex-start; gap: 10px; line-height: 1.5;
+    }
+    .plan-features li::before { content: "✓"; color: #c8a96e; flex-shrink: 0; margin-top: 1px; }
+    .plan-features li.muted::before { color: #252018; }
+    .plan-features li.muted { color: #2e2820; }
+    .btn {
+      display: block; width: 100%; padding: 13px; text-align: center;
+      border-radius: 8px; font-size: 14px; font-weight: 600;
+      text-decoration: none; cursor: pointer; border: none; transition: all 150ms;
+    }
+    .btn-primary { background: #c8a96e; color: #0a0a0a; }
+    .btn-primary:hover { background: #dfc080; }
+    .btn-ghost { background: transparent; color: #504840; border: 1px solid #1e2028; }
+    .btn-ghost:hover { border-color: #c8a96e33; color: #907060; }
+    .bottom-notes {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px; margin-top: 16px;
+    }
+    .note {
+      background: #111108; border: 1px solid #1e2028; border-radius: 8px;
+      padding: 18px 20px; text-align: left;
+    }
+    .note-icon { font-size: 20px; margin-bottom: 8px; }
+    .note-title { font-size: 13px; font-weight: 600; margin-bottom: 4px; }
+    .note-text { font-size: 12px; color: #504840; line-height: 1.5; }
+    a { color: #c8a96e; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    footer {
+      border-top: 1px solid #1e2028; padding: 28px 40px; text-align: center;
+      font-size: 12px; color: #504840; font-family: "DM Mono", monospace;
+    }
+    footer a { color: #706050; }
+    footer a:hover { color: #c8a96e; }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-brand" href="index.html">🦊 ContextShift</a>
+  <div class="nav-links">
+    <a href="pricing.html">Pricing</a>
+    <a href="privacy.html">Privacy</a>
+    <a href="terms.html">Terms</a>
+    <a href="refund.html">Refunds</a>
+  </div>
+</nav>
+
+<main>
+  <p class="eyebrow">Simple, honest pricing</p>
+  <h1>Pay once.<br/>Use it for as long as it works.</h1>
+  <p class="subtitle">
+    ContextShift started as a personal tool. It does what it says,
+    your data never leaves your device, and there are no recurring fees.
+  </p>
+
+  <div class="honest-note">
+    <strong>A note on honesty:</strong> ContextShift is built and maintained
+    by one developer. I can't promise support forever, but I can promise the
+    extension works well today, your data is always local, and if you're not
+    happy within 7 days you get your money back — no questions asked.
+  </div>
+
+  <div class="plans">
+    <div class="plan">
+      <div class="plan-name">Free</div>
+      <div class="plan-price">$0</div>
+      <div class="plan-period">forever</div>
+      <ul class="plan-features">
+        <li>5 saved workspaces</li>
+        <li>Native Chrome Tab Group integration</li>
+        <li>Workspace notes and status</li>
+        <li>10 auto-snapshots</li>
+        <li>Built-in workspace templates</li>
+        <li class="muted">Global tab search</li>
+        <li class="muted">Focus Reminder</li>
+        <li class="muted">Full snapshot history (30)</li>
+        <li class="muted">Custom workspace templates</li>
+        <li class="muted">Template sharing</li>
+      </ul>
+      <a href="CHROME_STORE_URL" class="btn btn-ghost">Install Free</a>
+    </div>
+
+    <div class="plan featured">
+      <div class="plan-name">Pro</div>
+      <div class="plan-price">$19</div>
+      <div class="plan-period">one-time payment</div>
+      <ul class="plan-features">
+        <li>Unlimited workspaces</li>
+        <li>Native Chrome Tab Group integration</li>
+        <li>Workspace notes and status</li>
+        <li>Full snapshot history (30 auto-saves)</li>
+        <li>Built-in & custom workspace templates</li>
+        <li>Global tab search across all workspaces</li>
+        <li>Focus Reminder with Pomodoro timer</li>
+        <li>Template sharing</li>
+        <li>Keyboard shortcut customisation</li>
+      </ul>
+      <a href="PADDLE_CHECKOUT_URL" class="btn btn-primary">Get Pro — $19</a>
+    </div>
+  </div>
+
+  <div class="bottom-notes">
+    <div class="note">
+      <div class="note-icon">🛡️</div>
+      <div class="note-title">7-day refund</div>
+      <div class="note-text">Not happy? Get a full refund through Paddle within 7 days. No questions asked.</div>
+    </div>
+    <div class="note">
+      <div class="note-icon">🔒</div>
+      <div class="note-title">Your data stays local</div>
+      <div class="note-text">Everything is stored on your device. No accounts, no syncing to servers.</div>
+    </div>
+    <div class="note">
+      <div class="note-icon">💳</div>
+      <div class="note-title">Payments by Paddle</div>
+      <div class="note-text">Secure checkout and refunds handled by Paddle, Merchant of Record.</div>
+    </div>
+    <div class="note">
+      <div class="note-icon">💬</div>
+      <div class="note-title">Share feedback</div>
+      <div class="note-text">
+        Found a bug or have a suggestion?
+        <a href="TALLY_FORM_URL">Let us know</a> — it genuinely shapes what gets built next.
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer>
+  © 2026 ContextShift by Bruno Santos &nbsp;·&nbsp;
+  <a href="privacy.html">Privacy</a> &nbsp;·&nbsp;
+  <a href="terms.html">Terms</a> &nbsp;·&nbsp;
+  <a href="refund.html">Refunds</a> &nbsp;·&nbsp;
+  <a href="TALLY_FORM_URL">Feedback</a>
+</footer>
+
+</body>
+</html>

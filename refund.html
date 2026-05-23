@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Refund Policy — ContextShift</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: #0a0a0a; color: #f0ece4; min-height: 100vh;
+    }
+    nav {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 20px 40px; border-bottom: 1px solid #1e2028;
+    }
+    .nav-brand { text-decoration: none; color: #f0ece4; font-weight: 700; font-size: 17px; }
+    .nav-links { display: flex; gap: 28px; }
+    .nav-links a { color: #706050; text-decoration: none; font-size: 14px; transition: color 150ms; }
+    .nav-links a:hover { color: #f0ece4; }
+    main { max-width: 720px; margin: 0 auto; padding: 64px 40px; }
+    .meta { font-size: 12px; color: #504840; font-family: "DM Mono", monospace; letter-spacing: 0.06em; margin-bottom: 12px; }
+    h1 { font-size: 36px; font-weight: 800; margin-bottom: 8px; }
+    .lead {
+      font-size: 15px; color: #706050; line-height: 1.7;
+      margin-bottom: 48px; padding-bottom: 32px; border-bottom: 1px solid #1e2028;
+    }
+    .guarantee-card {
+      background: #111108; border: 1px solid #c8a96e44;
+      border-radius: 12px; padding: 36px; text-align: center; margin-bottom: 48px;
+    }
+    .guarantee-icon { font-size: 48px; margin-bottom: 16px; }
+    .guarantee-title { font-size: 22px; font-weight: 700; margin-bottom: 10px; color: #c8a96e; }
+    .guarantee-subtitle { font-size: 14px; color: #706050; line-height: 1.7; }
+    h2 { font-size: 18px; font-weight: 700; margin: 36px 0 12px; }
+    p { font-size: 14px; color: #907060; line-height: 1.8; margin-bottom: 14px; }
+    ul { padding-left: 20px; margin-bottom: 14px; }
+    ul li { font-size: 14px; color: #907060; line-height: 1.8; margin-bottom: 8px; }
+    .steps { list-style: none; padding: 0; counter-reset: steps; }
+    .steps li {
+      counter-increment: steps; display: flex; align-items: flex-start;
+      gap: 16px; padding: 16px 0; border-bottom: 1px solid #1e2028;
+    }
+    .steps li::before {
+      content: counter(steps); background: #c8a96e; color: #0a0a0a;
+      width: 24px; height: 24px; border-radius: 50%; display: flex;
+      align-items: center; justify-content: center; font-size: 12px;
+      font-weight: 700; flex-shrink: 0; margin-top: 2px;
+    }
+    .paddle-box {
+      background: #111108; border: 1px solid #1e2028; border-radius: 10px;
+      padding: 24px 28px; margin: 24px 0; display: flex; gap: 16px; align-items: flex-start;
+    }
+    .paddle-box-icon { font-size: 28px; flex-shrink: 0; }
+    .paddle-box-title { font-size: 14px; font-weight: 600; margin-bottom: 6px; }
+    .paddle-box-text { font-size: 13px; color: #706050; line-height: 1.6; }
+    a { color: #c8a96e; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    footer {
+      border-top: 1px solid #1e2028; padding: 28px 40px; text-align: center;
+      font-size: 12px; color: #504840; font-family: "DM Mono", monospace;
+    }
+    footer a { color: #706050; }
+    footer a:hover { color: #c8a96e; }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-brand" href="index.html">🦊 ContextShift</a>
+  <div class="nav-links">
+    <a href="pricing.html">Pricing</a>
+    <a href="privacy.html">Privacy</a>
+    <a href="terms.html">Terms</a>
+    <a href="refund.html">Refunds</a>
+  </div>
+</nav>
+
+<main>
+  <p class="meta">Last updated: May 2026</p>
+  <h1>Refund Policy</h1>
+  <p class="lead">
+    We want you to feel confident buying ContextShift Pro.
+    If it's not right for you, getting a refund is simple and handled
+    entirely by our payment partner, Paddle.
+  </p>
+
+  <div class="guarantee-card">
+    <div class="guarantee-icon">🛡️</div>
+    <div class="guarantee-title">7-day money-back guarantee</div>
+    <div class="guarantee-subtitle">
+      Try ContextShift Pro for 7 days. Not satisfied for any reason?
+      Request a full refund directly through Paddle — no questions asked,
+      no forms to fill in, no waiting on us.
+    </div>
+  </div>
+
+  <div class="paddle-box">
+    <div class="paddle-box-icon">💳</div>
+    <div>
+      <div class="paddle-box-title">Refunds are handled by Paddle</div>
+      <div class="paddle-box-text">
+        ContextShift Pro is sold by Paddle, who act as the Merchant of Record
+        for all purchases. This means Paddle manage all payment processing,
+        receipts, and refunds on our behalf. You do not need to contact us
+        directly to get a refund.
+      </div>
+    </div>
+  </div>
+
+  <h2>How to request a refund</h2>
+  <ol class="steps">
+    <li>
+      <div>
+        Find your Paddle receipt email. It was sent to the email address
+        you used at checkout immediately after purchase. Your order number
+        is in the subject line.
+      </div>
+    </li>
+    <li>
+      <div>
+        Visit <a href="https://paddle.net/support" target="_blank">paddle.net/support</a>
+        and submit a refund request with your order number and purchase
+        email address.
+      </div>
+    </li>
+    <li>
+      <div>
+        Paddle will process your refund. It typically appears on your
+        statement within 5–10 business days depending on your bank or
+        card provider.
+      </div>
+    </li>
+  </ol>
+
+  <h2>What qualifies for a refund</h2>
+  <ul>
+    <li>Any purchase made within the last 7 days, for any reason</li>
+    <li>Technical issues that cannot be resolved within a reasonable timeframe</li>
+    <li>Extension stops functioning after a Chrome update and a fix
+        cannot be released within 30 days</li>
+  </ul>
+
+  <h2>What does not qualify</h2>
+  <ul>
+    <li>Requests made more than 7 days after the original purchase date</li>
+    <li>Licenses that have been shared or transferred to another user</li>
+  </ul>
+
+  <h2>After a refund</h2>
+  <p>
+    Your Pro license will be deactivated once a refund is confirmed.
+    You can continue using ContextShift on the Free tier indefinitely —
+    up to 5 workspaces with no time limit.
+  </p>
+
+  <h2>Still need help?</h2>
+  <p>
+    If you have trouble with the Paddle refund process or have a question
+    not covered here, use the contact form on this site and we will
+    assist you.
+  </p>
+</main>
+
+<footer>
+  © 2026 ContextShift by Bruno Santos &nbsp;·&nbsp;
+  <a href="pricing.html">Pricing</a> &nbsp;·&nbsp;
+  <a href="privacy.html">Privacy</a> &nbsp;·&nbsp;
+  <a href="terms.html">Terms</a> &nbsp;·&nbsp;
+  <a href="index.html">Contact</a>
+</footer>
+
+</body>
+</html>
