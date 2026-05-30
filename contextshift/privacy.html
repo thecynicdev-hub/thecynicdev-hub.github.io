@@ -62,7 +62,7 @@
 </nav>
 
 <main>
-  <p class="meta">Last updated: May 2026</p>
+  <p class="meta">Last updated: 30 May 2026</p>
   <h1>Privacy Policy</h1>
   <p class="lead">
     ContextShift is built on a simple principle: your browsing data is yours.
@@ -75,7 +75,7 @@
       <strong>Short version:</strong> ContextShift stores all your workspace
       data locally on your device using Chrome's built-in storage. We never
       see your tabs, URLs, or browsing activity. We collect no analytics,
-      no telemetry, and no personal data beyond what Paddle collects when
+      no telemetry, and no personal data beyond what Lemon Squeezy collects when
       you purchase a Pro license.
     </p>
   </div>
@@ -108,6 +108,10 @@
     It lives in your browser and is subject to Chrome's own storage limits
     and privacy controls.
   </p>
+  <p>
+    The lawful basis for processing license key validation data (GDPR Article 6)
+    is contractual necessity — we need to verify your license to fulfil your purchase.
+  </p>
 
   <h2>3. What data we do NOT collect</h2>
   <ul>
@@ -118,24 +122,44 @@
     <li>We do not sell or share your data with any third party</li>
   </ul>
 
-  <h2>4. Payments and Paddle</h2>
+  <h2>4. Payments and Lemon Squeezy</h2>
   <p>
-    Pro licenses are sold through Paddle.com, which acts as the Merchant of
-    Record for all transactions. When you purchase a Pro license, Paddle
+    Pro licenses are sold through Lemon Squeezy, which acts as the Merchant of
+    Record for all transactions. When you purchase a Pro license, Lemon Squeezy
     collects your payment information, email address, and billing details
     directly. We receive notification that a purchase was made but do not
     receive or store your payment card details.
   </p>
   <p>
-    Paddle's privacy policy governs how they handle your payment data:
-    <a href="https://www.paddle.com/legal/privacy" target="_blank">paddle.com/legal/privacy</a>.
+    Lemon Squeezy's privacy policy governs how they handle your payment data:
+    <a href="https://www.lemonsqueezy.com/privacy" target="_blank">lemonsqueezy.com/privacy</a>.
   </p>
   <p>
-    Refund requests are handled directly by Paddle. See our
+    Refund requests are handled directly by Lemon Squeezy. See our
     <a href="refund.html">Refund Policy</a> for details.
   </p>
 
-  <h2>5. Favicon display</h2>
+  <h2>5. License key validation</h2>
+  <p>
+    When you activate a Pro license by entering a license key in the extension
+    Settings, ContextShift sends that key to Lemon Squeezy's license validation
+    API (api.lemonsqueezy.com) to verify it is valid and active. No other data
+    is sent. This is the only outbound network request the extension makes
+    beyond loading the feedback form. The key is not stored on any server we
+    operate — it is validated directly against Lemon Squeezy's records.
+  </p>
+
+  <h2>6. Feedback form</h2>
+  <p>
+    The built-in feedback form is powered by Tally (tally.so), a third-party
+    form service. If you submit feedback, your responses and IP address are
+    processed by Tally under their privacy policy:
+    <a href="https://tally.so/privacy" target="_blank">tally.so/privacy</a>.
+    Submitting feedback is entirely optional and the form only loads when you
+    open the Feedback view.
+  </p>
+
+  <h2>7. Favicon display</h2>
   <p>
     When displaying website favicons next to tab titles, ContextShift uses
     the favicon provided by Chrome from the tab itself. ContextShift does
@@ -143,7 +167,7 @@
     available, a default placeholder icon is shown.
   </p>
 
-  <h2>6. Focus Reminder and content scripts</h2>
+  <h2>8. Focus Reminder and content scripts</h2>
   <p>
     When Focus Reminder is active, ContextShift injects a lightweight
     overlay script into web pages to display a reminder notice on sites
@@ -152,7 +176,7 @@
     overlay and responds to your dismiss action.
   </p>
 
-  <h2>7. Chrome permissions we request and why</h2>
+  <h2>9. Chrome permissions we request and why</h2>
   <ul>
     <li><strong>tabs</strong> — to read tab URLs and titles so you can save them to workspaces</li>
     <li><strong>tabGroups</strong> — to create and manage native Chrome tab groups for your workspaces</li>
@@ -162,7 +186,7 @@
     <li><strong>activeTab</strong> — to read the currently active tab when you add it to a workspace</li>
   </ul>
 
-  <h2>8. Data retention and deletion</h2>
+  <h2>10. Data retention and deletion</h2>
   <p>
     All workspace data is stored on your device. You can delete it at any time:
   </p>
@@ -177,13 +201,13 @@
     until your Chrome sync data is cleared in your Google account settings.
   </p>
 
-  <h2>9. Children's privacy</h2>
+  <h2>11. Children's privacy</h2>
   <p>
     ContextShift is not directed at children under 13. We do not knowingly
     collect personal information from children.
   </p>
 
-  <h2>10. Changes to this policy</h2>
+  <h2>12. Changes to this policy</h2>
   <p>
     We may update this Privacy Policy as the extension evolves. Material
     changes will be noted with an updated date at the top of this page.
@@ -191,7 +215,7 @@
     the updated policy.
   </p>
 
-  <h2>11. Contact</h2>
+  <h2>13. Contact</h2>
   <p>
     Questions about this policy? Email
     <a href="mailto:thecynicdev@gmail.com">thecynicdev@gmail.com</a>
@@ -204,9 +228,10 @@
 <footer>
   © 2026 ContextShift · The Cynic Dev &nbsp;·&nbsp;
   <a href="pricing.html">Pricing</a> &nbsp;·&nbsp;
+  <a href="privacy.html">Privacy</a> &nbsp;·&nbsp;
   <a href="terms.html">Terms</a> &nbsp;·&nbsp;
   <a href="refund.html">Refunds</a> &nbsp;·&nbsp;
-  <a href="index.html">Contact</a>
+  <a href="https://tally.so/r/QKOYll">Feedback</a>
 </footer>
 
 </body>
