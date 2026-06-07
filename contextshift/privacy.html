@@ -47,6 +47,11 @@
     }
     footer a { color: #706050; }
     footer a:hover { color: #c8a96e; }
+    .change-log { margin-bottom: 32px; }
+    .change-log h2 { font-size: 16px; font-weight: 700; margin-bottom: 12px; color: #f0ece4; }
+    .change-log table { width: 100%; border-collapse: collapse; font-size: 13px; }
+    .change-log th { background: #111108; color: #c8a96e; padding: 10px 16px; text-align: left; border: 1px solid #1e2028; }
+    .change-log td { color: #907060; padding: 10px 16px; border: 1px solid #1e2028; vertical-align: top; line-height: 1.5; }
   </style>
 </head>
 <body>
@@ -62,7 +67,24 @@
 </nav>
 
 <main>
-  <p class="meta">Last updated: 30 May 2026</p>
+  <p class="meta">Last updated: June 2026</p>
+  <div class="change-log">
+    <h2>Change history</h2>
+    <table>
+      <tr>
+        <th>Date</th>
+        <th>Change</th>
+      </tr>
+      <tr>
+        <td>June 2026</td>
+        <td>Updated to reflect Firefox and Edge support; replaced Paddle with Lemon Squeezy; added browser sync disclosure; added license validation API disclosure; updated permissions section for all three browsers</td>
+      </tr>
+      <tr>
+        <td>May 2026</td>
+        <td>Initial privacy policy</td>
+      </tr>
+    </table>
+  </div>
   <h1>Privacy Policy</h1>
   <p class="lead">
     ContextShift is built on a simple principle: your browsing data is yours.
@@ -73,7 +95,7 @@
   <div class="highlight-box">
     <p>
       <strong>Short version:</strong> ContextShift stores all your workspace
-      data locally on your device using Chrome's built-in storage. We never
+      data locally on your device using your browser's built-in storage. We never
       see your tabs, URLs, or browsing activity. We collect no analytics,
       no telemetry, and no personal data beyond what Lemon Squeezy collects when
       you purchase a Pro license.
@@ -90,8 +112,7 @@
   <h2>2. What data ContextShift stores</h2>
   <p>
     ContextShift stores the following data <strong>exclusively on your local
-    device</strong> using Chrome's <code>chrome.storage.local</code> and
-    <code>chrome.storage.sync</code> APIs:
+    device</strong> using your browser's built-in storage APIs:
   </p>
   <ul>
     <li>Workspace names you create</li>
@@ -100,12 +121,12 @@
     <li>Workspace snapshots (automatic backups of your workspace state)</li>
     <li>Template names and URLs you create</li>
     <li>Your extension settings and preferences</li>
-    <li>Your trial start date (stored in Chrome sync storage to persist across reinstalls)</li>
+    <li>Your trial start date (stored in browser sync storage to persist across reinstalls)</li>
     <li>Your Pro license activation status</li>
   </ul>
   <p>
     <strong>None of this data is transmitted to us or any third party.</strong>
-    It lives in your browser and is subject to Chrome's own storage limits
+    It lives in your browser and is subject to your browser's own storage limits
     and privacy controls.
   </p>
   <p>
@@ -162,7 +183,7 @@
   <h2>7. Favicon display</h2>
   <p>
     When displaying website favicons next to tab titles, ContextShift uses
-    the favicon provided by Chrome from the tab itself. ContextShift does
+    the favicon provided by the browser from the tab itself. ContextShift does
     not make requests to external favicon services. If no favicon is
     available, a default placeholder icon is shown.
   </p>
@@ -176,15 +197,16 @@
     overlay and responds to your dismiss action.
   </p>
 
-  <h2>9. Chrome permissions we request and why</h2>
+  <h2>9. Browser permissions we request and why</h2>
   <ul>
     <li><strong>tabs</strong> — to read tab URLs and titles so you can save them to workspaces</li>
-    <li><strong>tabGroups</strong> — to create and manage native Chrome tab groups for your workspaces</li>
+    <li><strong>tabGroups</strong> — to create and manage native browser tab groups for your workspaces (Chrome, Firefox 139+, and Edge)</li>
     <li><strong>storage</strong> — to save your workspaces and settings locally on your device</li>
     <li><strong>alarms</strong> — to run the auto-snapshot timer and Focus Reminder countdown in the background</li>
     <li><strong>scripting</strong> — to inject the Focus Reminder overlay on sites you choose to block</li>
     <li><strong>activeTab</strong> — to read the currently active tab when you add it to a workspace</li>
   </ul>
+  <p>Firefox additionally requires host permissions for all URLs (<code>https://*/*</code>) to inject the search overlay into web pages.</p>
 
   <h2>10. Data retention and deletion</h2>
   <p>
@@ -192,13 +214,28 @@
   </p>
   <ul>
     <li>Use "Reset all workspaces" or "Clear all snapshots" in ContextShift Settings</li>
-    <li>Uninstall the extension — Chrome removes all locally stored data</li>
-    <li>Clear Chrome's extension storage via Chrome DevTools</li>
+    <li>Uninstall the extension — your browser removes all locally stored extension data</li>
+    <li>Clear extension storage via your browser's developer tools</li>
   </ul>
   <p>
-    Note: your trial start date is stored in Chrome sync storage. If you
-    are signed into a Chrome profile, this may persist after uninstall
-    until your Chrome sync data is cleared in your Google account settings.
+    Your Pro license and trial status are stored in your browser's sync
+    storage and will persist across reinstalls if you are signed into your
+    browser account.
+  </p>
+  <p>
+    On Chrome and Edge, sync is automatic when signed into a Google or
+    Microsoft account respectively.
+  </p>
+  <p>
+    On Firefox, sync requires a Mozilla account and Add-ons must be enabled
+    in Firefox Sync settings (<code>about:preferences → Sync → Add-ons</code>).
+    Without this, <code>storage.sync</code> falls back to local storage only
+    and Pro status will not persist across reinstalls.
+  </p>
+  <p>
+    Sync is browser-specific. A license activated on Chrome will not
+    automatically appear on Firefox or Edge — the license key must be
+    re-entered in Settings on each browser.
   </p>
 
   <h2>11. Children's privacy</h2>

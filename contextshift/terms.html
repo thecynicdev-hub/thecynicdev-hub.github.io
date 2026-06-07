@@ -41,6 +41,11 @@
     }
     footer a { color: #706050; }
     footer a:hover { color: #c8a96e; }
+    .change-log { margin-bottom: 32px; }
+    .change-log h2 { font-size: 16px; font-weight: 700; margin-bottom: 12px; color: #f0ece4; }
+    .change-log table { width: 100%; border-collapse: collapse; font-size: 13px; }
+    .change-log th { background: #111108; color: #c8a96e; padding: 10px 16px; text-align: left; border: 1px solid #1e2028; }
+    .change-log td { color: #907060; padding: 10px 16px; border: 1px solid #1e2028; vertical-align: top; line-height: 1.5; }
   </style>
 </head>
 <body>
@@ -56,7 +61,24 @@
 </nav>
 
 <main>
-  <p class="meta">Last updated: 30 May 2026</p>
+  <p class="meta">Last updated: June 2026</p>
+  <div class="change-log">
+    <h2>Change history</h2>
+    <table>
+      <tr>
+        <th>Date</th>
+        <th>Change</th>
+      </tr>
+      <tr>
+        <td>June 2026</td>
+        <td>Updated for Firefox and Edge support; clarified browser extension language; updated refund processor from Paddle to Lemon Squeezy</td>
+      </tr>
+      <tr>
+        <td>May 2026</td>
+        <td>Initial terms of service</td>
+      </tr>
+    </table>
+  </div>
   <h1>Terms of Service</h1>
   <p class="lead">
     By installing or using ContextShift, you agree to these terms.
@@ -77,9 +99,9 @@
 
   <h2>1. What ContextShift is</h2>
   <p>
-    ContextShift is a Chrome browser extension developed and maintained
-    by Bruno Santos, trading as ContextShift ("we", "us"). It helps
-    organise browser tabs into named workspaces using Chrome's native
+    ContextShift is a browser extension available for Chrome, Firefox, and Edge,
+    developed and maintained by Bruno Santos, trading as ContextShift ("we", "us").
+    It helps organise browser tabs into named workspaces using the native browser
     tab group feature.
   </p>
   <p>
@@ -114,11 +136,11 @@
   </p>
   <p>
     We make no guarantee of indefinite support or compatibility with
-    future Chrome versions. Browser extensions are subject to platform
-    changes outside our control. If development is permanently
+    future Chrome, Firefox, or Edge versions. Browser extensions are subject to
+    platform changes outside our control. If development is permanently
     discontinued, no refund will be issued for purchases made more than
     14 days prior, but your installed version will continue to function
-    until Chrome's own changes prevent it.
+    until browser platform changes prevent it.
   </p>
   <p>
     In the event that development is permanently discontinued, an End of Life
@@ -145,7 +167,7 @@
     ContextShift is provided 'as is' without warranties of any kind,
     express or implied. We make no guarantee that the extension will be
     error-free, uninterrupted, or compatible with any current or future
-    version of Chrome or any other browser. There is no obligation to
+    version of Chrome, Firefox, Edge, or any other browser. There is no obligation to
     provide uptime, maintenance, or support for any specific browser
     version or operating system.
   </p>
@@ -169,8 +191,8 @@
   </p>
   <p>
     Workspace data is stored in your browser's local storage and is tied to
-    your Chrome profile. Data may be lost if you clear your browser data,
-    reset Chrome, switch to a different Chrome profile, or if your device
+    your browser profile. Data may be lost if you clear your browser data,
+    reset your browser, switch to a different browser profile, or if your device
     fails. ContextShift provides automatic snapshots as a convenience but
     these are also stored locally. For data you consider important, use the
     Markdown export feature to save a copy outside the extension.
