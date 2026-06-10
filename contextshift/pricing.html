@@ -142,11 +142,12 @@
         <li class="muted">Template sharing</li>
       </ul>
       <div style="display:flex;flex-direction:column;gap:8px;">
-        <a href="https://chromewebstore.google.com/detail/contextshift/dlepgpniiieoabehelmapldeojcdnjmb" class="btn btn-ghost">Install Free on Chrome →</a>
-        <a href="https://addons.mozilla.org/en-US/firefox/addon/contextshift/" class="btn btn-ghost">Install Free on Firefox →</a>
-        <!-- TODO: Replace EDGE_AMO_URL with real Microsoft Edge Add-ons URL -->
-        <a href="EDGE_AMO_URL" class="btn btn-ghost">Install Free on Edge →</a>
+        <a href="https://chromewebstore.google.com/detail/contextshift/dlepgpniiieoabehelmapldeojcdnjmb" class="btn btn-ghost" data-browser="chrome">Install Free on Chrome →</a>
+        <a href="https://addons.mozilla.org/en-US/firefox/addon/contextshift/" class="btn btn-ghost" data-browser="firefox">Install Free on Firefox →</a>
+        <!-- TODO: Replace href="#" with real Edge Add-ons URL when approved -->
+        <a href="#" onclick="return false" class="btn btn-ghost" data-browser="edge" title="Coming soon to Microsoft Edge Add-ons" style="opacity:0.55">Install Free on Edge — coming soon</a>
       </div>
+      <p style="font-size:11px;color:#504840;margin-top:8px;line-height:1.4;">Other Chromium-based browsers can use the Chrome button.</p>
     </div>
 
     <div class="plan featured">
@@ -205,5 +206,19 @@
   <a href="https://tally.so/r/QKOYll">Feedback</a>
 </footer>
 
+<script>
+(function () {
+  var ua = navigator.userAgent;
+  var browser = ua.indexOf('Edg/') !== -1 ? 'edge' :
+                ua.indexOf('Firefox/') !== -1 ? 'firefox' : 'chrome';
+  document.querySelectorAll('[data-browser]').forEach(function (btn) {
+    var isActive = btn.dataset.browser === browser;
+    var inactive = btn.classList.contains('btn') ? 'btn-ghost' : 'btn-secondary';
+    btn.classList.toggle('btn-primary', isActive);
+    btn.classList.toggle(inactive, !isActive);
+    if (isActive) btn.style.opacity = browser === 'edge' ? '0.8' : '1';
+  });
+}());
+</script>
 </body>
 </html>

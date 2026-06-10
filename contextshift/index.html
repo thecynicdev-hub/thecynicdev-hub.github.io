@@ -89,7 +89,7 @@
     <a href="terms.html">Terms</a>
     <a href="refund.html">Refunds</a>
     <a href="https://tally.so/r/QKOYll">Feedback</a>
-    <a class="btn-nav" href="https://chromewebstore.google.com/detail/contextshift/dlepgpniiieoabehelmapldeojcdnjmb">Install Free →</a>
+    <a class="btn-nav" id="nav-install" href="https://chromewebstore.google.com/detail/contextshift/dlepgpniiieoabehelmapldeojcdnjmb">Install Free →</a>
   </div>
 </nav>
 
@@ -101,12 +101,13 @@
     where you were. Free to try — no account needed.
   </p>
   <div class="cta-group">
-    <a href="https://chromewebstore.google.com/detail/contextshift/dlepgpniiieoabehelmapldeojcdnjmb" class="btn-primary">Install for Chrome →</a>
-    <a href="https://addons.mozilla.org/en-US/firefox/addon/contextshift/" class="btn-secondary">Install for Firefox →</a>
-    <!-- TODO: Replace EDGE_AMO_URL with real Microsoft Edge Add-ons URL -->
-    <a href="EDGE_AMO_URL" class="btn-secondary">Install for Edge →</a>
+    <a href="https://chromewebstore.google.com/detail/contextshift/dlepgpniiieoabehelmapldeojcdnjmb" class="btn-primary" data-browser="chrome">Install for Chrome →</a>
+    <a href="https://addons.mozilla.org/en-US/firefox/addon/contextshift/" class="btn-secondary" data-browser="firefox">Install for Firefox →</a>
+    <!-- TODO: Replace href="#" with real Edge Add-ons URL when approved -->
+    <a href="#" onclick="return false" class="btn-secondary" data-browser="edge" title="Coming soon to Microsoft Edge Add-ons" style="opacity:0.55">Install for Edge — coming soon</a>
     <a href="pricing.html" class="btn-secondary">See pricing</a>
   </div>
+  <p style="font-size:12px;color:#504840;margin-top:12px;">Other Chromium-based browsers can use the Chrome button.</p>
 
   <div class="features">
     <div class="feature">
@@ -178,5 +179,24 @@
   <a href="https://tally.so/r/QKOYll">Feedback</a>
 </footer>
 
+<script>
+(function () {
+  var ua = navigator.userAgent;
+  var browser = ua.indexOf('Edg/') !== -1 ? 'edge' :
+                ua.indexOf('Firefox/') !== -1 ? 'firefox' : 'chrome';
+  document.querySelectorAll('[data-browser]').forEach(function (btn) {
+    var isActive = btn.dataset.browser === browser;
+    var inactive = btn.classList.contains('btn') ? 'btn-ghost' : 'btn-secondary';
+    btn.classList.toggle('btn-primary', isActive);
+    btn.classList.toggle(inactive, !isActive);
+    if (isActive) btn.style.opacity = browser === 'edge' ? '0.8' : '1';
+  });
+  var nav = document.getElementById('nav-install');
+  if (nav) {
+    nav.href = { chrome: nav.href, firefox: 'https://addons.mozilla.org/en-US/firefox/addon/contextshift/', edge: '#' }[browser];
+    if (browser === 'edge') nav.onclick = function (e) { e.preventDefault(); };
+  }
+}());
+</script>
 </body>
 </html>
