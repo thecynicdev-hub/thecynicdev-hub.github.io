@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+# Exclude redirect stubs — these pages redirect elsewhere and have no unique content
+Disallow: /cynical-portfolio-analyser/index.html
+Disallow: /cynical-portfolio-analyser/privacy.html
+Disallow: /cynical-portfolio-analyser/refund.html
+Disallow: /cynical-portfolio-analyser/terms.html
+
+Sitemap: https://thecynicdev-hub.github.io/sitemap.xml
