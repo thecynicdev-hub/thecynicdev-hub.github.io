@@ -2,17 +2,80 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8"/>
+  <meta name="google-site-verification" content="fDKRy_6iUIQHcXLl_mdvj8TjRnGf0gMFZbxDpu5YqKE"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>ContextShift — Save and switch browser workspaces instantly</title>
-  <meta name="description" content="ContextShift saves your browser tab setups and switches between them in one click. Free extension for Chrome, Firefox, and Edge. Pro license $19 once — no subscription."/>
+  <title>ContextShift — Browser Workspace Manager for Chrome, Firefox &amp; Edge</title>
+  <meta name="description" content="Save and switch browser tab setups as named workspaces. Uses native tab groups in Chrome, Firefox, and Edge. Free for 5 workspaces, $19 one-time Pro. No account needed."/>
   <link rel="canonical" href="https://thecynicdev-hub.github.io/contextshift/"/>
   <meta property="og:type" content="website"/>
   <meta property="og:url" content="https://thecynicdev-hub.github.io/contextshift/"/>
-  <meta property="og:title" content="ContextShift — Save and switch browser workspaces instantly"/>
-  <meta property="og:description" content="ContextShift saves your browser tab setups and switches between them in one click. Free extension for Chrome, Firefox, and Edge. Pro license $19 once — no subscription."/>
-  <meta name="twitter:card" content="summary"/>
-  <meta name="twitter:title" content="ContextShift — Save and switch browser workspaces instantly"/>
-  <meta name="twitter:description" content="ContextShift saves your browser tab setups and switches between them in one click. Free extension for Chrome, Firefox, and Edge. Pro license $19 once — no subscription."/>
+  <meta property="og:title" content="ContextShift — Browser Workspace Manager"/>
+  <meta property="og:description" content="Save and switch browser tab setups as named workspaces. Chrome, Firefox, and Edge. Free to try."/>
+  <meta property="og:image" content="https://thecynicdev-hub.github.io/contextshift/og-image.png"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="ContextShift — Browser Workspace Manager"/>
+  <meta name="twitter:description" content="Save and switch browser tab setups as named workspaces. Chrome, Firefox, Edge. Free to try."/>
+  <meta name="twitter:image" content="https://thecynicdev-hub.github.io/contextshift/og-image.png"/>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "The Cynic Dev", "item": "https://thecynicdev-hub.github.io/" },
+      { "@type": "ListItem", "position": 2, "name": "ContextShift", "item": "https://thecynicdev-hub.github.io/contextshift/" }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "ContextShift",
+    "applicationCategory": "BrowserApplication",
+    "applicationSubCategory": "Productivity",
+    "operatingSystem": "Chrome, Firefox 139+, Edge",
+    "offers": [
+      { "@type": "Offer", "name": "Free", "price": "0", "priceCurrency": "USD", "description": "Free for up to 5 workspaces" },
+      { "@type": "Offer", "name": "Pro", "price": "19.00", "priceCurrency": "USD", "description": "One-time payment, unlimited workspaces, full feature access" }
+    ],
+    "description": "Save and switch browser tab setups as named workspaces using native tab groups. Auto-saves every 5 minutes. No account needed.",
+    "url": "https://thecynicdev-hub.github.io/contextshift/",
+    "author": { "@type": "Person", "name": "The Cynic Dev", "url": "https://thecynicdev-hub.github.io/" }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How is this different from just using browser tab groups?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Browser tab groups let you colour and label tabs. ContextShift adds saving them so they survive closing, switching between multiple saved setups in one click, auto-snapshots every 5 minutes, search across all your workspaces, and restoring exactly where you were. The tab groups themselves are still your browser's native ones — ContextShift just manages them." }
+      },
+      {
+        "@type": "Question",
+        "name": "Where is my data stored?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Everything is stored locally in your browser's extension storage — on your device. Nothing is sent to any server. The only outbound call the extension makes is to verify a Pro license key if you enter one." }
+      },
+      {
+        "@type": "Question",
+        "name": "What happens if my browser crashes?",
+        "acceptedAnswer": { "@type": "Answer", "text": "ContextShift auto-saves a snapshot of all your workspaces every 5 minutes. You can restore any of the last 30 snapshots from the Snapshots view." }
+      },
+      {
+        "@type": "Question",
+        "name": "Does it sync between devices?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Your workspaces sync across devices on the same browser if you are signed into your browser account (Google on Chrome/Edge, Mozilla on Firefox). Sync does not cross browsers — a workspace saved on Chrome won't appear in Firefox. This is a browser platform limitation, not something we can work around." }
+      },
+      {
+        "@type": "Question",
+        "name": "How does Firefox support work?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Firefox 139+ has full native tab group support matching Chrome's API. ContextShift uses it. The global search shortcut is Ctrl+Shift+F on Firefox (Ctrl+Shift+K conflicts with Firefox DevTools). Pro license sync on Firefox requires a Mozilla account with Add-ons sync enabled." }
+      }
+    ]
+  }
+  </script>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     body {
@@ -55,7 +118,7 @@
     .btn-secondary:hover { border-color: #c8a96e33; color: #c8a96e; }
     .features {
       display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 20px; margin-top: 80px; text-align: left;
+      gap: 20px; margin-top: 0; text-align: left;
     }
     .feature { background: #111108; border: 1px solid #1e2028; border-radius: 10px; padding: 24px; }
     .feature-icon { font-size: 24px; margin-bottom: 12px; }
@@ -69,6 +132,19 @@
     .honest-section h2 { font-size: 20px; font-weight: 700; margin-bottom: 12px; }
     .honest-section p { font-size: 14px; color: #706050; line-height: 1.8; margin-bottom: 12px; }
     .honest-section p:last-child { margin-bottom: 0; }
+    .how-section { margin-top: 80px; text-align: left; }
+    .how-section h2 { font-size: 20px; font-weight: 700; margin-bottom: 16px; }
+    .how-section p { font-size: 14px; color: #706050; line-height: 1.8; }
+    .features-heading { font-size: 20px; font-weight: 700; margin-top: 60px; margin-bottom: 24px; text-align: left; }
+    .browser-compat { margin-top: 60px; padding: 32px 40px; background: #111108; border: 1px solid #1e2028; border-radius: 12px; text-align: left; }
+    .browser-compat h2 { font-size: 20px; font-weight: 700; margin-bottom: 12px; }
+    .browser-compat p { font-size: 14px; color: #706050; line-height: 1.8; }
+    .pricing-preview { margin-top: 60px; padding: 32px 40px; background: #111108; border: 1px solid #1e2028; border-radius: 12px; text-align: left; }
+    .pricing-preview h2 { font-size: 20px; font-weight: 700; margin-bottom: 12px; }
+    .pricing-preview p { font-size: 14px; color: #706050; line-height: 1.8; margin-bottom: 12px; }
+    .pricing-preview p:last-child { margin-bottom: 0; }
+    .other-tools { margin-top: 60px; text-align: center; }
+    .other-tools p { font-size: 13px; color: #504840; }
     .feedback-section { margin-top: 60px; text-align: center; }
     .feedback-section h2 { font-size: 22px; font-weight: 700; margin-bottom: 10px; }
     .feedback-section p { font-size: 14px; color: #706050; max-width: 440px; margin: 0 auto 24px; line-height: 1.7; }
@@ -80,6 +156,31 @@
     }
     .btn-feedback:hover { background: #c8a96e11; border-color: #c8a96e; }
     a { color: #c8a96e; text-decoration: none; }
+    .faq-section { margin-top: 80px; text-align: left; }
+    .faq-section > h2 {
+      font-size: 20px; font-weight: 700; margin-bottom: 24px; text-align: center;
+    }
+    .faq-item {
+      border: 1px solid #1e2028; border-radius: 10px;
+      margin-bottom: 8px; background: #111108; overflow: hidden;
+    }
+    .faq-item summary {
+      padding: 18px 24px; font-size: 14px; font-weight: 600;
+      cursor: pointer; list-style: none;
+      display: flex; justify-content: space-between; align-items: center;
+      color: #f0ece4; transition: color 150ms;
+    }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::after {
+      content: '+'; color: #c8a96e; font-size: 20px; font-weight: 300;
+      flex-shrink: 0; margin-left: 16px; line-height: 1;
+    }
+    .faq-item[open] > summary { color: #c8a96e; }
+    .faq-item[open] > summary::after { content: '−'; }
+    .faq-answer {
+      padding: 14px 24px 20px; font-size: 13px; color: #706050;
+      line-height: 1.75; border-top: 1px solid #1e2028;
+    }
     footer {
       border-top: 1px solid #1e2028; padding: 28px 40px; text-align: center;
       font-size: 12px; color: #504840; font-family: "DM Mono", monospace;
@@ -93,6 +194,7 @@
 <nav>
   <a class="nav-brand" href="index.html">🦊 ContextShift</a>
   <div class="nav-links">
+    <a href="/" style="font-size:12px;color:#3a3028;">← The Cynic Dev</a>
     <a href="pricing.html">Pricing</a>
     <a href="privacy.html">Privacy</a>
     <a href="terms.html">Terms</a>
@@ -104,7 +206,7 @@
 
 <main>
   <p class="eyebrow">Chrome, Firefox &amp; Edge · Built for anyone with too many tabs</p>
-  <h1>Your tabs,<br/>under control.</h1>
+  <h1>ContextShift — Browser Workspace Manager</h1>
   <p class="subtitle">
     Save your tab setup, switch contexts in one click, and never lose
     where you were. Free to try — no account needed.
@@ -118,6 +220,12 @@
   </div>
   <p style="font-size:12px;color:#504840;margin-top:12px;">Other Chromium-based browsers can use the Chrome button.</p>
 
+  <div class="how-section">
+    <h2>How ContextShift works</h2>
+    <p>Save your current tabs as a named workspace with one click. Switch between workspaces instantly — every tab restores exactly where you left it. ContextShift auto-saves a snapshot every 5 minutes so nothing is lost if your browser crashes. Use the global search shortcut to find any tab across all workspaces without leaving the keyboard.</p>
+  </div>
+
+  <h2 class="features-heading">Features</h2>
   <div class="features">
     <div class="feature">
       <div class="feature-icon">🗂</div>
@@ -151,6 +259,11 @@
     </div>
   </div>
 
+  <div class="browser-compat">
+    <h2>Works on Chrome, Firefox, and Edge</h2>
+    <p>ContextShift uses each browser's built-in tab group API, so workspaces appear as real native tab groups — your tabs look and behave exactly as you expect, no custom UI to learn. Full support for Chrome, Edge, and Firefox 139+. The global search shortcut is ⌘K on Chrome and Edge, Ctrl+Shift+F on Firefox.</p>
+  </div>
+
   <div class="honest-section">
     <h2>A word from the maker</h2>
     <p>
@@ -177,6 +290,45 @@
     </p>
     <a href="https://tally.so/r/QKOYll" class="btn-feedback">Share feedback →</a>
   </div>
+
+  <div class="pricing-preview">
+    <h2>Pricing</h2>
+    <p>Free for up to 5 workspaces — no account, no signup required. <strong style="color:#f0ece4;">Pro is $19 once</strong>: unlimited workspaces, full 30-snapshot history, global tab search, Focus Reminder, and custom workspace templates. No subscription, no renewal. 14-day refund if it's not for you.</p>
+    <p><a href="pricing.html">See full pricing →</a></p>
+  </div>
+
+  <div class="faq-section">
+    <h2>Frequently asked questions</h2>
+
+    <details class="faq-item">
+      <summary>How is this different from just using browser tab groups?</summary>
+      <div class="faq-answer">Browser tab groups let you colour and label tabs. ContextShift adds saving them so they survive closing, switching between multiple saved setups in one click, auto-snapshots every 5 minutes, search across all your workspaces, and restoring exactly where you were. The tab groups themselves are still your browser's native ones — ContextShift just manages them.</div>
+    </details>
+
+    <details class="faq-item">
+      <summary>Where is my data stored?</summary>
+      <div class="faq-answer">Everything is stored locally in your browser's extension storage — on your device. Nothing is sent to any server. The only outbound call the extension makes is to verify a Pro license key if you enter one.</div>
+    </details>
+
+    <details class="faq-item">
+      <summary>What happens if my browser crashes?</summary>
+      <div class="faq-answer">ContextShift auto-saves a snapshot of all your workspaces every 5 minutes. You can restore any of the last 30 snapshots from the Snapshots view.</div>
+    </details>
+
+    <details class="faq-item">
+      <summary>Does it sync between devices?</summary>
+      <div class="faq-answer">Your workspaces sync across devices on the same browser if you are signed into your browser account (Google on Chrome/Edge, Mozilla on Firefox). Sync does not cross browsers — a workspace saved on Chrome won't appear in Firefox. This is a browser platform limitation, not something we can work around.</div>
+    </details>
+
+    <details class="faq-item">
+      <summary>How does Firefox support work?</summary>
+      <div class="faq-answer">Firefox 139+ has full native tab group support matching Chrome's API. ContextShift uses it. The global search shortcut is Ctrl+Shift+F on Firefox (Ctrl+Shift+K conflicts with Firefox DevTools). Pro license sync on Firefox requires a Mozilla account with Add-ons sync enabled.</div>
+    </details>
+  </div>
+
+  <section class="other-tools">
+    <p>More tools coming from <a href="/">The Cynic Dev</a></p>
+  </section>
 </main>
 
 <footer>

@@ -1,56 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
-  <!-- Homepage -->
-  <url>
-    <loc>https://thecynicdev-hub.github.io/</loc>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <sitemap>
+    <loc>https://thecynicdev-hub.github.io/sitemap-hub.xml</loc>
     <lastmod>2026-06-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-
-  <!-- ContextShift -->
-  <url>
-    <loc>https://thecynicdev-hub.github.io/contextshift/</loc>
+  </sitemap>
+  <sitemap>
+    <loc>https://thecynicdev-hub.github.io/contextshift/sitemap.xml</loc>
     <lastmod>2026-06-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <url>
-    <loc>https://thecynicdev-hub.github.io/contextshift/pricing.html</loc>
-    <lastmod>2026-06-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://thecynicdev-hub.github.io/contextshift/privacy.html</loc>
-    <lastmod>2026-06-10</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-  </url>
-
-  <url>
-    <loc>https://thecynicdev-hub.github.io/contextshift/terms.html</loc>
-    <lastmod>2026-06-10</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-  </url>
-
-  <url>
-    <loc>https://thecynicdev-hub.github.io/contextshift/refund.html</loc>
-    <lastmod>2026-06-10</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-  </url>
-
-  <!-- Cynical Portfolio Analyser -->
-  <url>
-    <loc>https://thecynicdev-hub.github.io/cynical-portfolio-analyser/pricing.html</loc>
-    <lastmod>2026-06-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-</urlset>
+  </sitemap>
+</sitemapindex>
