@@ -4,10 +4,7 @@ Disallow: /node_modules/
 Disallow: /_legacy/
 Disallow: /dist/
 
-# Exclude redirect stubs — these pages redirect elsewhere and have no unique content
-Disallow: /cynical-portfolio-analyser/index.html
-Disallow: /cynical-portfolio-analyser/privacy.html
-Disallow: /cynical-portfolio-analyser/refund.html
-Disallow: /cynical-portfolio-analyser/terms.html
+# Cynical Portfolio Analyser — app not yet public; keep all CPA pages off the index
+Disallow: /cynical-portfolio-analyser/
 
 Sitemap: https://thecynicdev-hub.github.io/sitemap.xml
