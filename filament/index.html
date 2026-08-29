@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="google-site-verification" content="fDKRy_6iUIQHcXLl_mdvj8TjRnGf0gMFZbxDpu5YqKE"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="robots" content="noindex, nofollow"/>
+  <!-- Filament isn't public yet — noindex here + Disallow: /filament/ in robots.txt,
+       same pattern as cynical-portfolio-analyser. This page is a real homepage
+       (not a meta-refresh stub) because Google's OAuth verification reviewers need
+       to actually see it. Remove noindex + add to sitemap.xml when the app launches. -->
+  <title>Filament — Filament Tracker for 3D Printing</title>
+  <!-- Favicons -->
+  <link rel="icon" type="image/x-icon"
+    href="/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="32x32"
+    href="/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="16x16"
+    href="/favicon-16.png" />
+  <link rel="apple-touch-icon" sizes="180x180"
+    href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <meta name="theme-color" content="#0a0a0a" />
+  <meta name="description" content="Track your 3D printing filament. Know what's running low before you start a job. Free for 5 spools, one-time Pro unlock. No subscription."/>
+  <link rel="canonical" href="https://thecynicdev-hub.github.io/filament/"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://thecynicdev-hub.github.io/filament/"/>
+  <meta property="og:title" content="Filament — Filament Tracker for 3D Printing"/>
+  <meta property="og:description" content="Track your 3D printing filament. Know what's running low before you start a job."/>
+  <!-- TODO: replace with /filament/og-image.png once Filament has its own icon/OG asset -->
+  <meta property="og:image" content="https://thecynicdev-hub.github.io/og-image.png"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="Filament — Filament Tracker for 3D Printing"/>
+  <meta name="twitter:description" content="Track your 3D printing filament. Know what's running low before you start a job."/>
+  <meta name="twitter:image" content="https://thecynicdev-hub.github.io/og-image.png"/>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "The Cynic Dev", "item": "https://thecynicdev-hub.github.io/" },
+      { "@type": "ListItem", "position": 2, "name": "Filament", "item": "https://thecynicdev-hub.github.io/filament/" }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Filament",
+    "applicationCategory": "UtilitiesApplication",
+    "operatingSystem": "Android",
+    "offers": [
+      { "@type": "Offer", "name": "Free", "price": "0", "priceCurrency": "USD", "description": "Free for up to 5 spools, with low-stock notifications" }
+    ],
+    "description": "Track 3D printing filament spool inventory, log prints, and get low-stock notifications before a job runs dry.",
+    "url": "https://thecynicdev-hub.github.io/filament/",
+    "author": { "@type": "Person", "name": "The Cynic Dev", "url": "https://thecynicdev-hub.github.io/" }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How is my data stored?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Locally on your device. Cloud Backup (Pro) syncs to a hidden folder in your own Google Drive — we never see your data on any server we operate." }
+      },
+      {
+        "@type": "Question",
+        "name": "What's included in Pro?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Unlimited spools, CSV export and import, cloud backup with photo sync, custom material types, drying log, print cost tracking, and a stats screen. One-time purchase through Google Play — no subscription, ever." }
+      },
+      {
+        "@type": "Question",
+        "name": "How do notifications work?",
+        "acceptedAnswer": { "@type": "Answer", "text": "We check for low-stock spools (below 15% remaining) at the frequency you choose — Daily, Weekly, or Off. No notification is sent if every spool is fine." }
+      },
+      {
+        "@type": "Question",
+        "name": "What happens if I uninstall the app?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Local data is deleted. With Cloud Backup enabled, reinstalling and signing in with the same Google account restores your spools automatically." }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I recover a deleted spool?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. Deleted spools are kept for 30 days. Open History and tap Restore on the spool you want back." }
+      }
+    ]
+  }
+  </script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: #0a0a0a; color: #f0ece4; min-height: 100vh;
+    }
+    nav {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 20px 40px; border-bottom: 1px solid #1e2028;
+    }
+    .nav-brand { text-decoration: none; color: #f0ece4; font-weight: 700; font-size: 17px; }
+    .nav-links { display: flex; gap: 28px; align-items: center; }
+    .nav-links a { color: #706050; text-decoration: none; font-size: 14px; transition: color 150ms; }
+    .nav-links a:hover { color: #f0ece4; }
+    .btn-nav {
+      background: #c8a96e; color: #0a0a0a; padding: 8px 18px;
+      border-radius: 6px; font-size: 13px; font-weight: 600;
+      text-decoration: none; transition: background 150ms;
+    }
+    main { max-width: 760px; margin: 0 auto; padding: 100px 40px; text-align: center; }
+    .eyebrow {
+      font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase;
+      color: #c8a96e; margin-bottom: 20px; font-family: "DM Mono", monospace;
+    }
+    h1 { font-size: clamp(34px, 5.5vw, 56px); font-weight: 800; line-height: 1.1; margin-bottom: 20px; }
+    .subtitle { font-size: 16px; color: #706050; max-width: 500px; margin: 0 auto 44px; line-height: 1.7; }
+    .cta-group { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+    .btn-primary {
+      background: #c8a96e; color: #0a0a0a; padding: 14px 32px;
+      border-radius: 8px; font-size: 15px; font-weight: 700;
+      text-decoration: none; transition: background 150ms;
+    }
+    .btn-secondary {
+      background: transparent; color: #706050; padding: 14px 32px;
+      border-radius: 8px; font-size: 15px; font-weight: 600;
+      text-decoration: none; border: 1px solid #1e2028; transition: all 150ms;
+    }
+    .btn-secondary:hover { border-color: #c8a96e33; color: #c8a96e; }
+    .features {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px; margin-top: 0; text-align: left;
+    }
+    .feature { background: #111108; border: 1px solid #1e2028; border-radius: 10px; padding: 24px; }
+    .feature-icon { font-size: 24px; margin-bottom: 12px; }
+    .feature-title { font-size: 14px; font-weight: 600; margin-bottom: 8px; }
+    .feature-desc { font-size: 12px; color: #504840; line-height: 1.6; }
+    .feature-pro { font-size: 10px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #c8a96e; margin-left: 6px; }
+    .honest-section {
+      margin-top: 80px; padding: 40px;
+      background: #111108; border: 1px solid #1e2028; border-radius: 12px;
+      text-align: left;
+    }
+    .honest-section h2 { font-size: 20px; font-weight: 700; margin-bottom: 12px; }
+    .honest-section p { font-size: 14px; color: #706050; line-height: 1.8; margin-bottom: 12px; }
+    .honest-section p:last-child { margin-bottom: 0; }
+    .features-heading { font-size: 20px; font-weight: 700; margin-top: 60px; margin-bottom: 24px; text-align: left; }
+    .pricing-preview { margin-top: 60px; padding: 32px 40px; background: #111108; border: 1px solid #1e2028; border-radius: 12px; text-align: left; }
+    .pricing-preview h2 { font-size: 20px; font-weight: 700; margin-bottom: 12px; }
+    .pricing-preview p { font-size: 14px; color: #706050; line-height: 1.8; margin-bottom: 12px; }
+    .pricing-preview p:last-child { margin-bottom: 0; }
+    .other-tools { margin-top: 60px; text-align: center; }
+    .other-tools p { font-size: 13px; color: #504840; }
+    a { color: #c8a96e; text-decoration: none; }
+    .faq-section { margin-top: 80px; text-align: left; }
+    .faq-section > h2 { font-size: 20px; font-weight: 700; margin-bottom: 24px; text-align: center; }
+    .faq-item { border: 1px solid #1e2028; border-radius: 10px; margin-bottom: 8px; background: #111108; overflow: hidden; }
+    .faq-item summary {
+      padding: 18px 24px; font-size: 14px; font-weight: 600; cursor: pointer; list-style: none;
+      display: flex; justify-content: space-between; align-items: center; color: #f0ece4; transition: color 150ms;
+    }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::after { content: '+'; color: #c8a96e; font-size: 20px; font-weight: 300; flex-shrink: 0; margin-left: 16px; line-height: 1; }
+    .faq-item[open] > summary { color: #c8a96e; }
+    .faq-item[open] > summary::after { content: '−'; }
+    .faq-answer { padding: 14px 24px 20px; font-size: 13px; color: #706050; line-height: 1.75; border-top: 1px solid #1e2028; }
+    footer {
+      border-top: 1px solid #1e2028; padding: 28px 40px; text-align: center;
+      font-size: 12px; color: #504840; font-family: "DM Mono", monospace;
+    }
+    footer a { color: #706050; text-decoration: none; }
+    footer a:hover { color: #c8a96e; }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-brand" href="index.html">🧵 Filament</a>
+  <div class="nav-links">
+    <a href="/" style="font-size:12px;color:#3a3028;">← The Cynic Dev</a>
+    <a href="privacy.html">Privacy</a>
+    <a href="terms.html">Terms</a>
+  </div>
+</nav>
+
+<main>
+  <p class="eyebrow">Android · For 3D printing enthusiasts</p>
+  <h1>Never run out of filament mid-print</h1>
+  <p class="subtitle">
+    Track your 3D printing filament. Know what's running low before you
+    start a job — no spreadsheet, no guessing which spool to grab.
+  </p>
+  <div class="cta-group">
+    <!-- TODO: replace with real Google Play Store URL once Filament is live -->
+    <a href="#" onclick="return false" class="btn-primary" style="opacity:0.55" title="Coming soon to Google Play">Get it on Google Play — coming soon</a>
+    <a href="privacy.html" class="btn-secondary">Read the privacy policy</a>
+  </div>
+
+  <h2 class="features-heading">Features</h2>
+  <div class="features">
+    <div class="feature">
+      <div class="feature-icon">🎨</div>
+      <div class="feature-title">Track your stock at a glance</div>
+      <div class="feature-desc">Colour, material, brand, and a weight gauge for every spool — see remaining filament without opening a drawer.</div>
+    </div>
+    <div class="feature">
+      <div class="feature-icon">📋</div>
+      <div class="feature-title">Log every print</div>
+      <div class="feature-desc">Record prints against specific spools — job name, grams used, notes. Build a real history of what consumed what.</div>
+    </div>
+    <div class="feature">
+      <div class="feature-icon">🔔</div>
+      <div class="feature-title">Low-stock alerts</div>
+      <div class="feature-desc">Get notified when a spool drops below 15% remaining — before it ruins a print. Free for everyone, no upgrade needed.</div>
+    </div>
+    <div class="feature">
+      <div class="feature-icon">☁️</div>
+      <div class="feature-title">Cloud backup<span class="feature-pro">Pro</span></div>
+      <div class="feature-desc">Syncs to your own Google Drive — your data, your storage. We never see it.</div>
+    </div>
+    <div class="feature">
+      <div class="feature-icon">📷</div>
+      <div class="feature-title">Photo attachments<span class="feature-pro">Pro</span></div>
+      <div class="feature-desc">Attach a photo to any spool so you recognise it at a glance.</div>
+    </div>
+    <div class="feature">
+      <div class="feature-icon">📊</div>
+      <div class="feature-title">Stats &amp; cost tracking<span class="feature-pro">Pro</span></div>
+      <div class="feature-desc">Print history, total weight used, material breakdown, and material cost per print from a cost-per-kg you set.</div>
+    </div>
+  </div>
+
+  <div class="honest-section">
+    <h2>A word from the maker</h2>
+    <p>
+      I kept losing track of which spool was nearly empty until a print
+      failed halfway through. Filament fixes that — a clear view of what
+      you have, logged prints that build into a real history, and a
+      notification before you're caught out again.
+    </p>
+    <p>
+      Everything lives on your device. No analytics, no ads, no tracking.
+      Cloud backup is optional and uses your own Google Drive account —
+      not a server I run. I'll maintain it for as long as I can, and if
+      that ever changes, I'll be upfront about it here.
+    </p>
+    <p style="color: #504840; font-size: 13px;">— The Cynic Dev</p>
+  </div>
+
+  <div class="pricing-preview">
+    <h2>Pricing</h2>
+    <p>Free for up to 5 spools, with low-stock notifications included. <strong style="color:#f0ece4;">Filament Pro is a one-time purchase</strong> through Google Play — unlimited spools, cloud backup, photo attachments, custom materials, drying log, and a stats screen. No subscription, ever.</p>
+  </div>
+
+  <div class="faq-section">
+    <h2>Frequently asked questions</h2>
+
+    <details class="faq-item">
+      <summary>How is my data stored?</summary>
+      <div class="faq-answer">Locally on your device. Cloud Backup (Pro) syncs to a hidden folder in your own Google Drive — we never see your data on any server we operate.</div>
+    </details>
+
+    <details class="faq-item">
+      <summary>What's included in Pro?</summary>
+      <div class="faq-answer">Unlimited spools, CSV export and import, cloud backup with photo sync, custom material types, drying log, print cost tracking, and a stats screen. One-time purchase through Google Play — no subscription, ever.</div>
+    </details>
+
+    <details class="faq-item">
+      <summary>How do notifications work?</summary>
+      <div class="faq-answer">We check for low-stock spools (below 15% remaining) at the frequency you choose — Daily, Weekly, or Off. No notification is sent if every spool is fine.</div>
+    </details>
+
+    <details class="faq-item">
+      <summary>What happens if I uninstall the app?</summary>
+      <div class="faq-answer">Local data is deleted. With Cloud Backup enabled, reinstalling and signing in with the same Google account restores your spools automatically.</div>
+    </details>
+
+    <details class="faq-item">
+      <summary>Can I recover a deleted spool?</summary>
+      <div class="faq-answer">Yes. Deleted spools are kept for 30 days. Open History and tap Restore on the spool you want back.</div>
+    </details>
+  </div>
+
+  <section class="other-tools">
+    <p>More tools from <a href="/">The Cynic Dev</a></p>
+  </section>
+</main>
+
+<footer>
+  © 2026 Filament · The Cynic Dev &nbsp;·&nbsp;
+  <a href="privacy.html">Privacy</a> &nbsp;·&nbsp;
+  <a href="terms.html">Terms</a>
+</footer>
+
+</body>
+</html>

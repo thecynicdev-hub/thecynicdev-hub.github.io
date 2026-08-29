@@ -40,7 +40,7 @@
       display: flex; align-items: center; justify-content: space-between;
       padding: 20px 40px; border-bottom: 1px solid #1e2028;
     }
-    .nav-brand { color: #f0ece4; font-weight: 700; font-size: 17px; }
+    .nav-brand { text-decoration: none; color: #f0ece4; font-weight: 700; font-size: 17px; }
     .nav-links { display: flex; gap: 28px; }
     .nav-links a { color: #706050; text-decoration: none; font-size: 14px; transition: color 150ms; }
     .nav-links a:hover { color: #f0ece4; }
@@ -82,13 +82,12 @@
 </head>
 <body>
 
-<!-- No index.html for Filament yet, so the brand isn't a link and nav only
-     offers the way back to the hub — add Pricing/Terms/Refunds links here
-     once those pages exist. -->
 <nav>
-  <span class="nav-brand">🧵 Filament</span>
+  <a class="nav-brand" href="index.html">🧵 Filament</a>
   <div class="nav-links">
     <a href="/" style="font-size:12px;color:#3a3028;">← The Cynic Dev</a>
+    <a href="privacy.html">Privacy</a>
+    <a href="terms.html">Terms</a>
   </div>
 </nav>
 
@@ -257,7 +256,8 @@
 
 <footer>
   © 2026 Filament · The Cynic Dev &nbsp;·&nbsp;
-  <a href="privacy.html">Privacy</a>
+  <a href="privacy.html">Privacy</a> &nbsp;·&nbsp;
+  <a href="terms.html">Terms</a>
 </footer>
 
 </body>
