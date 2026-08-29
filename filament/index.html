@@ -4,11 +4,6 @@
   <meta charset="UTF-8"/>
   <meta name="google-site-verification" content="fDKRy_6iUIQHcXLl_mdvj8TjRnGf0gMFZbxDpu5YqKE"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="robots" content="noindex, nofollow"/>
-  <!-- Filament isn't public yet — noindex here + Disallow: /filament/ in robots.txt,
-       same pattern as cynical-portfolio-analyser. This page is a real homepage
-       (not a meta-refresh stub) because Google's OAuth verification reviewers need
-       to actually see it. Remove noindex + add to sitemap.xml when the app launches. -->
   <title>Filament — Filament Tracker for 3D Printing</title>
   <!-- Favicons -->
   <link rel="icon" type="image/x-icon"
@@ -21,17 +16,17 @@
     href="/apple-touch-icon.png" />
   <link rel="manifest" href="/site.webmanifest" />
   <meta name="theme-color" content="#0a0a0a" />
-  <meta name="description" content="Track your 3D printing filament. Know what's running low before you start a job. Free for 5 spools, one-time Pro unlock. No subscription."/>
+  <meta name="description" content="Coming soon to Google Play: track your 3D printing filament and know what's running low before you start a job. Free for 5 spools, one-time Pro unlock. No subscription."/>
   <link rel="canonical" href="https://thecynicdev-hub.github.io/filament/"/>
   <meta property="og:type" content="website"/>
   <meta property="og:url" content="https://thecynicdev-hub.github.io/filament/"/>
   <meta property="og:title" content="Filament — Filament Tracker for 3D Printing"/>
-  <meta property="og:description" content="Track your 3D printing filament. Know what's running low before you start a job."/>
+  <meta property="og:description" content="Coming soon to Google Play: track your 3D printing filament and know what's running low before you start a job."/>
   <!-- TODO: replace with /filament/og-image.png once Filament has its own icon/OG asset -->
   <meta property="og:image" content="https://thecynicdev-hub.github.io/og-image.png"/>
   <meta name="twitter:card" content="summary_large_image"/>
   <meta name="twitter:title" content="Filament — Filament Tracker for 3D Printing"/>
-  <meta name="twitter:description" content="Track your 3D printing filament. Know what's running low before you start a job."/>
+  <meta name="twitter:description" content="Coming soon to Google Play: track your 3D printing filament and know what's running low before you start a job."/>
   <meta name="twitter:image" content="https://thecynicdev-hub.github.io/og-image.png"/>
   <script type="application/ld+json">
   {
@@ -151,6 +146,12 @@
     .pricing-preview h2 { font-size: 20px; font-weight: 700; margin-bottom: 12px; }
     .pricing-preview p { font-size: 14px; color: #706050; line-height: 1.8; margin-bottom: 12px; }
     .pricing-preview p:last-child { margin-bottom: 0; }
+    .coming-soon-banner {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: #c8a96e18; border: 1px solid #c8a96e44; border-radius: 20px;
+      padding: 6px 16px; font-size: 12px; font-weight: 600; color: #c8a96e;
+      margin-bottom: 28px; font-family: "DM Mono", monospace; letter-spacing: 0.04em;
+    }
     .other-tools { margin-top: 60px; text-align: center; }
     .other-tools p { font-size: 13px; color: #504840; }
     a { color: #c8a96e; text-decoration: none; }
@@ -186,6 +187,7 @@
 </nav>
 
 <main>
+  <div class="coming-soon-banner">🚧 Not yet available — coming soon to Google Play</div>
   <p class="eyebrow">Android · For 3D printing enthusiasts</p>
   <h1>Never run out of filament mid-print</h1>
   <p class="subtitle">
@@ -251,6 +253,7 @@
   <div class="pricing-preview">
     <h2>Pricing</h2>
     <p>Free for up to 5 spools, with low-stock notifications included. <strong style="color:#f0ece4;">Filament Pro is a one-time purchase</strong> through Google Play — unlimited spools, cloud backup, photo attachments, custom materials, drying log, and a stats screen. No subscription, ever.</p>
+    <p style="font-size:12px;color:#504840;">Exact Pro price is set per market in Google Play and will be confirmed when Filament launches.</p>
   </div>
 
   <div class="faq-section">

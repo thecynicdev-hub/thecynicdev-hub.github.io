@@ -8,7 +8,4 @@ Disallow: /docs/
 # Cynical Portfolio Analyser — app not yet public; keep all CPA pages off the index
 Disallow: /cynical-portfolio-analyser/
 
-# Filament — app not yet public; keep all Filament pages off the index
-Disallow: /filament/
-
 Sitemap: https://thecynicdev-hub.github.io/sitemap.xml
