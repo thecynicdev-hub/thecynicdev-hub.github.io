@@ -65,7 +65,7 @@ pages — privacy, terms, refunds — plus, in future, guides / how-tos / FAQs).
 |--------------------|-------|
 | Payment processor  | **Lemon Squeezy** (Merchant of Record — handles VAT, receipts, refunds). Replaced Paddle in June 2026. |
 | Feedback form      | Tally — `https://tally.so/r/QKOYll` (currently shared by both apps; TODO: separate form for CPA) |
-| Search verification| `<meta name="google-site-verification" content="fDKRy_6iUIQHcXLl_mdvj8TjRnGf0gMFZbxDpu5YqKE"/>` — keep on indexable pages |
+| Search verification| **Two** `google-site-verification` meta tags on every page — do not remove either. `fDKRy_6iUIQHcXLl_mdvj8TjRnGf0gMFZbxDpu5YqKE` (primary Search Console owner) and `4dYxNjx9Q419Sy29qKvjuPaFl4GpJPzzLWC1bf9fPWw` (2nd owner — the Google account that owns the Filament OAuth / Google Cloud project; needed so its OAuth consent-screen branding verification passes). |
 
 Do **not** invent product URLs (store listings, app URLs, checkout links). If a
 real URL isn't known, use the documented placeholder token from the app's
@@ -98,7 +98,7 @@ theme-color meta  #0a0a0a
 ## Per-page `<head>` conventions
 
 Every indexable page includes, in this order:
-1. `<meta charset>`, google-site-verification, viewport
+1. `<meta charset>`, both google-site-verification tags (see table above), viewport
 2. `<title>` — pattern: `Product — Short descriptor` or `Product Thing — …`
 3. Favicon block (absolute `/` paths): `favicon.ico`, `favicon-32.png`,
    `favicon-16.png`, `apple-touch-icon.png`, `site.webmanifest`, `theme-color`
