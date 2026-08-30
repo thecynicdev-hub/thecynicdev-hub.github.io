@@ -30,7 +30,7 @@ license-key validation against `api.lemonsqueezy.com`.
 
 | Thing | URL |
 |-------|-----|
-| Product page | `https://thecynicdev-hub.github.io/contextshift/` |
+| Product page | `https://thecynicdev.com/contextshift/` |
 | Chrome Web Store | `https://chromewebstore.google.com/detail/contextshift/dlepgpniiieoabehelmapldeojcdnjmb` |
 | Firefox Add-ons (AMO) | `https://addons.mozilla.org/en-US/firefox/addon/contextshift/` |
 | Edge Add-ons | **NOT approved yet** — links use `href="#"` + `onclick="return false"` + "coming soon" styling. Replace when the user provides the real URL. |

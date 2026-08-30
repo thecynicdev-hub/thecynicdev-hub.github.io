@@ -10,7 +10,7 @@ A **static GitHub Pages site** that acts as an application portfolio / hub for
 in its own folder with a set of child pages (product page, pricing, and legal
 pages — privacy, terms, refunds — plus, in future, guides / how-tos / FAQs).
 
-- **Live URL:** https://thecynicdev-hub.github.io/
+- **Live URL:** https://thecynicdev.com/
 - **Repo / remote:** `thecynicdev-hub/ContextShiftExtension` (branch `main`)
 - **Hosting:** GitHub Pages, served from repo root. `.nojekyll` is present —
   Jekyll is disabled, so files are served exactly as committed.
@@ -103,7 +103,7 @@ Every indexable page includes, in this order:
 3. Favicon block (absolute `/` paths): `favicon.ico`, `favicon-32.png`,
    `favicon-16.png`, `apple-touch-icon.png`, `site.webmanifest`, `theme-color`
 4. `<meta name="description">` (≤ ~160 chars)
-5. `<link rel="canonical">` — absolute `https://thecynicdev-hub.github.io/...`
+5. `<link rel="canonical">` — absolute `https://thecynicdev.com/...`
 6. Open Graph (`og:type/url/title/description/image`) + Twitter card tags.
    OG image: hub uses `/og-image.png`; each app uses `/<app>/og-image.png`.
 7. JSON-LD where it applies (see `contextshift/index.html`: `BreadcrumbList`,

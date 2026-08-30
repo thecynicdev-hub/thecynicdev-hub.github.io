@@ -1,11 +1,11 @@
-# thecynicdev-hub.github.io
+# thecynicdev.com
 
 Static GitHub Pages site — an application portfolio / hub for **The Cynic Dev**.
 The front page lists the apps; each app has its own folder with a product page,
 pricing, and legal pages (privacy / terms / refunds), plus room for guides and
 FAQs.
 
-- **Live:** https://thecynicdev-hub.github.io/
+- **Live:** https://thecynicdev.com/
 - **Stack:** plain HTML, inline CSS per page, no build system. `.nojekyll` is set.
 - **Deploy:** push to `main`.
 
