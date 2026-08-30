@@ -16,12 +16,12 @@
     href="/apple-touch-icon.png" />
   <link rel="manifest" href="/site.webmanifest" />
   <meta name="theme-color" content="#0a0a0a" />
-  <meta name="description" content="Filament privacy policy — your spool inventory stays on your device or in your own Google Drive. No servers, no analytics, no tracking."/>
+  <meta name="description" content="Filament privacy policy — your spool inventory stays on your device and in your own Google Drive. No servers, no analytics, no tracking."/>
   <link rel="canonical" href="https://thecynicdev-hub.github.io/filament/privacy.html"/>
   <meta property="og:type" content="website"/>
   <meta property="og:url" content="https://thecynicdev-hub.github.io/filament/privacy.html"/>
   <meta property="og:title" content="Filament Privacy Policy"/>
-  <meta property="og:description" content="Filament privacy policy — your spool inventory stays on your device or in your own Google Drive. No servers, no analytics, no tracking."/>
+  <meta property="og:description" content="Filament privacy policy — your spool inventory stays on your device and in your own Google Drive. No servers, no analytics, no tracking."/>
   <!-- TODO: replace with /filament/og-image.png once Filament has its own icon/OG asset -->
   <meta property="og:image" content="https://thecynicdev-hub.github.io/og-image.png"/>
   <meta name="twitter:card" content="summary_large_image"/>
@@ -98,6 +98,10 @@
       </tr>
       <tr>
         <td>August 2026</td>
+        <td>Added section 4 to disclose Android Auto Backup, which copies app data to the user's own Google Drive for all users. Clarified that this is separate from the Pro Cloud Backup feature.</td>
+      </tr>
+      <tr>
+        <td>August 2026</td>
         <td>Initial privacy policy</td>
       </tr>
     </table>
@@ -105,17 +109,20 @@
   <h1>Privacy Policy</h1>
   <p class="lead">
     Filament is a filament inventory tracker for 3D printing. Your spool
-    data lives on your device, and — only if you choose to turn on Cloud
-    Backup — in your own Google Drive. We do not run servers that store
-    your spools, your prints, or anything else about you.
+    data lives on your device and, through Google's own backup services, in
+    your own Google Drive. We do not run servers that store your spools,
+    your prints, or anything else about you.
   </p>
 
   <div class="highlight-box">
     <p>
       <strong>Short version:</strong> Filament stores all your data locally
-      on your device. If you enable Cloud Backup (Pro), your data syncs to a
+      on your device. Android's own backup service also copies it to your
+      Google Drive so you don't lose it when you change phone — that is a
+      system feature you control in your phone's settings, not something we
+      operate. If you enable Cloud Backup (Pro), your data also syncs to a
       hidden folder in your own Google Drive that only Filament can see — we
-      cannot access it, and neither can any other app. We collect no
+      cannot access either copy, and neither can any other app. We collect no
       analytics, no telemetry, and no personal data beyond what Google Play
       collects when you make a purchase.
     </p>
@@ -141,8 +148,10 @@
     <li>App settings — weight unit, currency symbol, notification frequency, theme</li>
   </ul>
   <p>
-    <strong>None of this data is sent to us.</strong> It stays on your
-    device unless you turn on Cloud Backup, described below.
+    <strong>None of this data is sent to us.</strong> It leaves your device
+    only through Google's own services, in the two ways described in
+    sections 4 and 5 — both of which put it in storage that belongs to you,
+    not to us.
   </p>
 
   <h2>3. What data we do NOT collect</h2>
@@ -154,7 +163,26 @@
     <li>We show no ads and use no ad networks</li>
   </ul>
 
-  <h2>4. Cloud Backup and Google Drive (Pro feature)</h2>
+  <h2>4. Android Auto Backup (all users)</h2>
+  <p>
+    Filament uses <strong>Android Auto Backup</strong>, the backup service
+    built into Android. When your phone is idle, charging and on Wi-Fi,
+    Android copies the app's data to your own Google Drive so that
+    reinstalling Filament, or setting up a new phone, restores your
+    inventory instead of starting empty. This applies to all users,
+    including free ones, and it is separate from the Pro Cloud Backup
+    feature described below.
+  </p>
+  <ul>
+    <li>The copy is stored in your own Google Drive, under your Google account. It does not count against your visible Drive storage quota and does not appear in your Drive file list</li>
+    <li>The transfer is performed by Android itself. We do not operate it, cannot trigger it, and cannot read the result</li>
+    <li>What is copied: your spool database (spools, print history, drying log, activity log), attached photos, and your app settings</li>
+    <li>What is deliberately excluded: your Pro purchase record (Google Play is the authority on that and re-checks it directly) and Cloud Backup's internal sync bookkeeping</li>
+    <li><strong>You can turn this off.</strong> On most devices: Settings → Google → Backup, or Settings → System → Backup. Turning it off stops future backups and, on some Android versions, deletes existing ones</li>
+    <li>Google's handling of this data is governed by the <a href="https://policies.google.com/privacy">Google Privacy Policy</a></li>
+  </ul>
+
+  <h2>5. Cloud Backup and Google Drive (Pro feature)</h2>
   <p>
     Cloud Backup is optional and off by default. If you turn it on and sign
     in with your Google account, Filament requests exactly one Google Drive
@@ -176,7 +204,7 @@
     resume, or contact Google to clear leftover app data for your account.
   </p>
 
-  <h2>5. Photo attachments (Pro feature)</h2>
+  <h2>6. Photo attachments (Pro feature)</h2>
   <p>
     When you attach a photo to a spool, Filament opens Android's built-in
     Photo Picker — the system picker Google provides so apps never need
@@ -186,7 +214,7 @@
     described above.
   </p>
 
-  <h2>6. Payments and Google Play</h2>
+  <h2>7. Payments and Google Play</h2>
   <p>
     Filament Pro is a one-time purchase made through Google Play Billing.
     Google acts as the merchant of record for this transaction: Google
@@ -201,7 +229,7 @@
     <a href="https://support.google.com/googleplay/answer/2479637" target="_blank">Google Play refund policy</a>.
   </p>
 
-  <h2>7. Low-stock notifications</h2>
+  <h2>8. Low-stock notifications</h2>
   <p>
     Filament can notify you when a spool is running low. This check runs
     entirely on your device on a schedule you control in Settings — it does
@@ -209,13 +237,13 @@
     this notification.
   </p>
 
-  <h2>8. Permissions we request and why</h2>
+  <h2>9. Permissions we request and why</h2>
   <ul>
     <li><strong>Notifications</strong> — to show the low-stock alert described above</li>
     <li><strong>Internet</strong> — used only for Cloud Backup (talking to Google Drive) and Google Play Billing (processing your purchase). Filament makes no other network requests</li>
   </ul>
 
-  <h2>9. Data retention and deletion</h2>
+  <h2>10. Data retention and deletion</h2>
   <p>
     Your data stays on your device until you delete it or uninstall the
     app. Deleting a spool moves it to a recycle bin for 30 days (so you can
@@ -225,16 +253,17 @@
   </p>
   <ul>
     <li>Uninstalling Filament removes all locally stored data from your device</li>
-    <li>Revoking Drive access (see section 4) stops future syncing but does not retroactively delete what's already in your Drive folder</li>
+    <li>An Android Auto Backup copy (see section 4) may remain in your Google Drive after uninstalling, so that reinstalling restores your data. You can delete it yourself from your device's backup settings, and Google deletes it automatically if the app goes unused for an extended period</li>
+    <li>Revoking Drive access (see section 5) stops future syncing but does not retroactively delete what's already in your Drive folder</li>
   </ul>
 
-  <h2>10. Children's privacy</h2>
+  <h2>11. Children's privacy</h2>
   <p>
     Filament is not directed at children under 13. We do not knowingly
     collect personal information from children.
   </p>
 
-  <h2>11. Changes to this policy</h2>
+  <h2>12. Changes to this policy</h2>
   <p>
     We may update this Privacy Policy as the app evolves. Material changes
     will be noted with an updated date at the top of this page and a new
@@ -242,7 +271,7 @@
     changes constitutes acceptance of the updated policy.
   </p>
 
-  <h2>12. Contact</h2>
+  <h2>13. Contact</h2>
   <p>
     Questions about this policy? Email
     <a href="mailto:thecynicdev@gmail.com">thecynicdev@gmail.com</a>.
